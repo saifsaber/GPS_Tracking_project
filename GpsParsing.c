@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+char UART_receivechar ()
 //Check if FIFO not empty to receive data from UART
 while ((UART1_FR_R&	0x10) !=0);
 return (char) UART1_DR_R;
